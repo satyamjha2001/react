@@ -2962,10 +2962,7 @@ const h1 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
 }, undefined);
 const root = (0, _client.createRoot)(document.querySelector("#root"));
 root.render(h1);
-console.log(`Hello World!!!`); //this helps in hot reloading matlab isse website me change direct hoga bina refresh kare.
- // if(module.hot) {
- //     module.hot.accept();
- // }
+console.log(`Hello World!!!`);
 
   $parcel$ReactRefreshHelpers$595d.postlude(module);
 } finally {
