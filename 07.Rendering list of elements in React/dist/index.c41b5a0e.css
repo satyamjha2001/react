@@ -1,0 +1,22 @@
+.card {
+  background-color: gray;
+  border: 1px solid #000;
+  border-radius: 8px;
+  max-width: 250px;
+  padding: 8px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card h2, .card p {
+  margin: 6px 0;
+}
+
+.container {
+  flex-wrap: wrap;
+  gap: 16px;
+  display: flex;
+}
+/*# sourceMappingURL=index.c41b5a0e.css.map */

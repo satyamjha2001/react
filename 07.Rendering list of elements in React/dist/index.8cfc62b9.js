@@ -2953,23 +2953,82 @@ $parcel$ReactRefreshHelpers$595d.prelude(module);
 try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
-const h1 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    children: "Hello World!!!"
-}, void 0, false, {
-    fileName: "script.js",
-    lineNumber: 3,
-    columnNumber: 12
-}, undefined);
+var _styleCss = require("./style.css");
 const root = (0, _client.createRoot)(document.querySelector("#root"));
-root.render(h1);
-console.log(`Hello World!!!`);
+function Card(key, image, title, price, brand, category) {
+    if (brand === undefined) brand = category;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: image,
+                alt: "iphone"
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: title
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: brand
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                    children: [
+                        "$",
+                        price
+                    ]
+                }, void 0, true, {
+                    fileName: "script.js",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this)
+        ]
+    }, key, true, {
+        fileName: "script.js",
+        lineNumber: 12,
+        columnNumber: 5
+    }, this);
+}
+_c = Card;
+fetch("https://dummyjson.com/products?limit=200&skip=10").then((res)=>res.json()).then((data)=>{
+    console.log(data);
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container",
+        children: data.products.map((product)=>{
+            return Card(product.id, product.thumbnail, product.title, product.price, product.brand, product.category);
+        })
+    }, void 0, false, {
+        fileName: "script.js",
+        lineNumber: 28,
+        columnNumber: 7
+    }, undefined));
+}); // const container = [Card(1), Card(2), Card(3), Card(4), Card(5)];
+ // console.log(Card());
+var _c;
+$RefreshReg$(_c, "Card");
 
   $parcel$ReactRefreshHelpers$595d.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./style.css":"dRy26"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27350,6 +27409,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["86oZd","1xC6H","6rimH"], "6rimH", "parcelRequireb648")
+},{"7422ead32dcc1e6b":"786KC"}],"dRy26":[function() {},{}]},["86oZd","1xC6H","6rimH"], "6rimH", "parcelRequirebdce")
 
 //# sourceMappingURL=index.8cfc62b9.js.map
