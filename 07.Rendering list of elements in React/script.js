@@ -20,7 +20,7 @@ function Card(key, image, title, price, brand, category) {
   );
 }
 
-fetch("https://dummyjson.com/products?limit=200&skip=10")
+fetch("https://dummyjson.com/products?limit=50&skip=77")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);

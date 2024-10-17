@@ -3006,7 +3006,7 @@ function Card(key, image, title, price, brand, category) {
     }, this);
 }
 _c = Card;
-fetch("https://dummyjson.com/products?limit=200&skip=10").then((res)=>res.json()).then((data)=>{
+fetch("https://dummyjson.com/products?limit=50&skip=77").then((res)=>res.json()).then((data)=>{
     console.log(data);
     root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
