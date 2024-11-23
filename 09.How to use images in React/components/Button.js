@@ -1,9 +1,9 @@
-const Button = ({imageUrl}) => {
+const Button = ({imageUrl, buttonName}) => {
   return (
-      <button>
-          <img src={imageUrl} alt="button" />
+    <button title={buttonName}>
+      <img src={imageUrl} alt={buttonName} />
     </button>
-  )
+  );
 }
 
 export default Button;
