@@ -1,6 +1,6 @@
 import AppleCounter from "./components/AppleCounter";
 
-const App = () => {
+const App = ({root}) => {
   return (
     <div>
       <h1
@@ -11,7 +11,7 @@ const App = () => {
         Hello
       </h1>
       <input type="text" />
-      <AppleCounter />
+      <AppleCounter root={root}/>
     </div>
   );
 };

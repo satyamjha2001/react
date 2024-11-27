@@ -4,19 +4,19 @@ import RightArrow from "../assets/images/right-arrow.png";
 import AppleBasket from "./AppleBasket";
 import "./AppleCounter.css";
 
-import { createRoot } from "react-dom/client";
-const root = createRoot(document.querySelector("#root"));
+// import { createRoot } from "react-dom/client";
+// const root = createRoot(document.querySelector("#root"));
 
 const totalAppleCount = 10;
 let rightAppleCount = 0;
 let leftAppleCount = totalAppleCount - rightAppleCount;
-const AppleCounter = () => {
+const AppleCounter = ({root}) => {
   
   const leftClickHandler = () => {
     if (leftAppleCount < 10) {
       leftAppleCount++;
       rightAppleCount--;
-      root.render(<AppleCounter />);
+      root.render(<AppleCounter root={root}/>);
     }
   };
   const rightClickHandler = () => {
@@ -24,7 +24,7 @@ const AppleCounter = () => {
       rightAppleCount++;
       leftAppleCount--;
       console.log(rightAppleCount);
-      root.render(<AppleCounter />);
+      root.render(<AppleCounter root={root} />);
     }
   };
   return (
