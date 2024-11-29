@@ -1,11 +1,11 @@
 import AppleCounter from "./components/AppleCounter";
 import Counter from "./components/Counter";
 
-const App = ({ root }) => {
+const App = () => {
   return (
     <div>
       {/* <Counter /> */}
-      <AppleCounter root={root} />
+      <AppleCounter />
     </div>
   );
 };
