@@ -1,17 +1,20 @@
-export default function CountryCard() {
+export default function CountryCard({name,flag,population,region,capital,}) {
   return (
-    <a class="country-card" href="/country.html?name=South Georgia">
-      <img src="https://flagcdn.com/gs.svg" alt="South Georgia flag" />
-      <div class="card-text">
-        <h3 class="card-title">South Georgia</h3>
+    <a className="country-card" href={`/country.html?name=${name}`}>
+      <img src={flag} alt={`${name} flag`} />
+      <div className="card-text">
+        <h3 className="card-title">{name}</h3>
         <p>
-          <b>Population: </b>30
+          <b>Population: </b>
+          {population}
         </p>
         <p>
-          <b>Region: </b>Antarctic
+          <b>Region: </b>
+          {region}
         </p>
         <p>
-          <b>Capital: </b>King Edward Point
+          <b>Capital: </b>
+          {capital}
         </p>
       </div>
     </a>
