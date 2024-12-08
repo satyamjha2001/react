@@ -4,10 +4,11 @@ import { useParams } from "react-router";
 
 export default function CountryDetail() {
   const params = useParams();
-  console.log(params);
-  
+  // console.log(params);
+
   const countryName = params.country;
   const [countryData, setCountryData] = useState(null);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
@@ -29,9 +30,18 @@ export default function CountryDetail() {
           languages: Object.values(data.languages).join(", "),
           // borderCountries: Object.values(data.borders).join(", "),
         });
+      })
+      .catch(() => {
+        setNotFound(true);
       });
   }, []);
-
+  if (notFound) {
+    return (
+      <div>
+        <h1>Country not found</h1>
+      </div>
+    );
+  }
   return countryData === null ? (
     "Loading...."
   ) : (
