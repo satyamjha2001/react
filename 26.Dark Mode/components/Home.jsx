@@ -6,7 +6,7 @@ import { useOutletContext } from "react-router";
 
 export default function Home() {
   const [query, setQuery] = useState("");
-  const {isDark} = useOutletContext(); //ye important hai agar hume outlet se kuchh chahiye jo wo bhej raha hai.
+  const [isDark] = useOutletContext(); //ye important hai agar hume outlet se kuchh chahiye jo wo bhej raha hai.
   // console.log(theme);
   
   return (
