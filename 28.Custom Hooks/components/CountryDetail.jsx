@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./CountryDetail.css";
 import { Link, useLocation, useParams } from "react-router";
 import { useTheme } from "../hooks/useThemes";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 export default function CountryDetail() {
   const params = useParams();
@@ -18,6 +19,7 @@ export default function CountryDetail() {
   // console.log(countryData?.borders);
 
   const [isDark] = useTheme();
+  const {width, height} = useWindowSize();
 
   function updateCountryData(data) {
     setCountryData({
@@ -79,6 +81,9 @@ export default function CountryDetail() {
     "Loading...."
   ) : (
     <main className={`${isDark ? "dark" : ""}`}>
+      <h1 style={{ textAlign: "center" }}>
+        {width} X {height}
+      </h1>
       <div className="country-details-container">
         <span className="back-button" onClick={() => window.history.back()}>
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
