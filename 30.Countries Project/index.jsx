@@ -28,6 +28,7 @@ import CountryDetail from "./components/CountryDetail";
 //   },
 // ]);
 
+
 const root = createRoot(document.querySelector("#root"));
 // root.render(<RouterProvider router={router} />);
 root.render(
