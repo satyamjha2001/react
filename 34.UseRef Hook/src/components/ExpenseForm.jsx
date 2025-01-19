@@ -30,7 +30,7 @@ export default function ExpenseForm({ setExpenses }) {
       <button
         onClick={() => {
           myRef.current++;
-          console.log(myRef); //console isliye karana para kyunki rerender nahi, to change nahi.
+          console.log(myRef); //console isliye karana para kyunki rerender nahi to change nahi.
         }}
       >
         Click Me
