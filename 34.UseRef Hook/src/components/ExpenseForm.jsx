@@ -11,7 +11,7 @@ export default function ExpenseForm({ setExpenses }) {
   console.log(myRef);
   // hum useRef ka use tab karte hai jab humko variable update karna hai lekin page reload nhi karna ho.
   //means useState ke time jab hum setState karenge to page reload hota hai lekin isme nahi hoga.
-
+  let myNum = 0;
   function handleSubmit(e) {
     e.preventDefault();
     setExpenses((prevState) => [
@@ -31,11 +31,14 @@ export default function ExpenseForm({ setExpenses }) {
         onClick={() => {
           myRef.current++;
           console.log(myRef); //console isliye karana para kyunki rerender nahi to change nahi.
+          myNum++;
+          console.log(myNum); //ab value iski kabhi change hoke display pe nahi dikhega
+          //basic diff ye hai ki jab hum useRef wale ko use karenge or value change karenge tab wo change screen par nahi dikhega lekin agar hum kisi aise element ko change karenge jisse rerender ho jaise ki useState to value change hoga jaise hum isme form me value type karenge to value change hoga.
         }}
       >
         Click Me
       </button>
-      <h1>{myRef.current}</h1>
+      <h1> myRef = {myRef.current}, myNum = {myNum} </h1>
       <form className="expense-form" onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="title">Title</label>
